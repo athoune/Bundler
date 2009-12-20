@@ -3,3 +3,5 @@ dist
 build
 .svn
 *.pyc
+src/*.pyc
+src/.svn
