@@ -28,6 +28,7 @@ Usage
   bundler "someFolder/*.png"
 
 You should use `pngcrush`_ or `optipng`_ for a perfect optimisation.
+Bundler builds a pig PNG file, a cute CSS file and an ugly HTML test file.
 
 .. _`PIL`: http://www.pythonware.com/products/pil/
 .. _`pngcrush`: http://pmt.sourceforge.net/pngcrush/
