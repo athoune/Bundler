@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf8 -*-
+
+import sys
+import bundler
+from optparse import OptionParser
+
+bundler.bundle(sys.argv[1])
