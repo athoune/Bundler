@@ -10,7 +10,7 @@ and only few downloads can be parralilized.
 
 GWT use this trick for an efficient toolbar's pictures downloading. 
 
-A simple with Adium's images :
+A simple test with Adium's images :
  - Folder size : 420K
  - Pure image bundle : 248K
  - Optipnged image : 240K
