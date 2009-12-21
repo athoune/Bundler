@@ -33,6 +33,7 @@ Usage
 ::
 
   bundler "someFolder/*.png"
+
 Don't forget the quote or your shell will try to handle it
 
 You should use `pngcrush`_ or `optipng`_ for a perfect optimisation.
