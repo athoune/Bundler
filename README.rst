@@ -10,6 +10,13 @@ and only few downloads can be parralilized.
 
 GWT use this trick for an efficient toolbar's pictures downloading. 
 
+A simple with Adium's images :
+ - Folder size : 420K
+ - Pure image bundle : 248K
+ - Optipnged image : 240K
+
+60% diet for all this images.
+
 Install
 =======
 
@@ -26,6 +33,7 @@ Usage
 ::
 
   bundler "someFolder/*.png"
+Don't forget the quote or your shell will try to handle it
 
 You should use `pngcrush`_ or `optipng`_ for a perfect optimisation.
 
