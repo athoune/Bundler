@@ -109,20 +109,20 @@ class Bundle:
 					lineH = h
 				#print "pasting", big, (w,h), (width, height)
 				big.paste(img.image, (width, height))
-				id = img.path.replace("/","_")
-				id = id.replace(" ", "_")
-				ids = id.split('.')
+				idt = img.path.replace("/","_")
+				idt = idt.replace(" ", "_")
+				ids = idt.split('.')
 				if len(ids) > 1:
-					id = ".".join(ids[:-1])
+					idt = ".".join(ids[:-1])
 				css += """
 .%s {
 	background: transparent url(bundle.png) no-repeat -%ipx -%ipx;
 	width: %ipx;
 	height: %ipx;
 }
-				""" % (id, width, height, w, h)
+				""" % (idt, width, height, w, h)
 				html += """<h2>%s</h2><div class="%s redborder">&nbsp</div>
-""" % (img.path, id)
+""" % (img.path, idt)
 				width += w
 		big.save('bundle.png')
 		f = open('bundle.css', 'w')
@@ -158,7 +158,9 @@ class Img:
 
 def bundle(pattern):
 	b = Bundle()
-	for name in glob.glob(pattern):
+	print pattern
+	for name in glob.iglob(pattern):
+		print name
 		im = Image.open(name)
 		#redBorder(im)
 		b.add(name, im)
@@ -167,7 +169,6 @@ def bundle(pattern):
 def testCroix():
 	cpt = 0
 	def imageFactory(size):
-		global cpt
 		cpt += 1
 		im = Image.new("RGB", size)
 		w,h = size
