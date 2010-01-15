@@ -27,6 +27,18 @@ Install
   python setup.py build
   sudo python setup.py install
 
+Manual install of PIL
+=====================
+
+Download source from http://effbot.org/downloads/#imaging
+
+::
+
+  tar -xvzf Imaging-1.1.7.tar.gz
+  cd Imaging-1.1.7
+  python setup.py build
+  sudo python setup.py install
+
 Usage
 =====
 
