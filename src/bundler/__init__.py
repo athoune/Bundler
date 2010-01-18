@@ -27,6 +27,10 @@ __version__ = "0.2"
 import Image
 import ImageDraw
 import glob
+import os
+import os.path
+import mimetypes
+import subprocess
 
 class MultiMap:
 	def __init__(self):
@@ -156,7 +160,7 @@ class Img:
 	def __repr__(self):
 		return "<Img path:%s image:%s>" % (str(self.path), str(self.image))
 
-def bundle(pattern):
+def bundle_pattern(pattern):
 	b = Bundle()
 	print pattern
 	for name in glob.iglob(pattern):
@@ -164,6 +168,22 @@ def bundle(pattern):
 		im = Image.open(name)
 		#redBorder(im)
 		b.add(name, im)
+	b.build()
+
+def bundle(folder):
+	if not os.path.isdir(folder):
+		raise StandardException, "I need a folder"
+	Image.preinit()
+	mimes = Image.MIME.values()
+	b = Bundle()
+	for stuff in os.listdir(folder):
+		mime = mimetypes.guess_type(stuff)
+		#print mime, stuff
+		if mime[0] in mimes:
+			print stuff
+			path = os.path.join(folder, stuff)
+			im = Image.open(path)
+			b.add(path, im)
 	b.build()
 
 def testCroix():
@@ -203,4 +223,4 @@ def testCroix():
 	b.build()
 	
 if __name__ == '__main__':
-	bundle("transmission/*.png")
+	bundle("/Applications/TextMate.app/Contents/Resources")
