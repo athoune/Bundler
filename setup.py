@@ -12,9 +12,9 @@ setup(name='imageBundler',
       description='Image bundler',
       author='Mathieu Lecarme',
       author_email='mathieu@garambrogne.net',
-      url='https://admin.garambrogne.net/projets/bundler',
+      url='http://github.com/athoune/Bundler',
       packages=['bundler'],
       package_dir={'': 'src'},
       scripts=['bin/bundler'],
-      install_requires=["PIL==1.1.7"]
+      install_requires=["PIL==1.1.7"],
      )
