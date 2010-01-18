@@ -24,8 +24,8 @@ et tu entasse le reste
 __author__ = "mlecarme"
 __version__ = "0.2"
 
-from PIL import Image
-from PIL import ImageDraw
+import Image
+import ImageDraw
 import glob
 
 class MultiMap:

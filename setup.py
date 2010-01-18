@@ -16,5 +16,5 @@ setup(name='imageBundler',
       packages=['bundler'],
       package_dir={'': 'src'},
       scripts=['bin/bundler'],
-      install_requires=["PIL"]
+      install_requires=["PIL==1.1.7"]
      )
