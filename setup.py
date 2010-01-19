@@ -7,7 +7,7 @@ use_setuptools()
 from setuptools import setup
 
 setup(name='imageBundler',
-      version='0.2.2',
+      version='0.2.3',
       license='GPL-3',
       description='Image bundler',
       author='Mathieu Lecarme',
