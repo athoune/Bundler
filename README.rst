@@ -27,26 +27,14 @@ Install
   python setup.py build
   sudo python setup.py install
 
-Manual install of PIL
-=====================
-
-Download source from http://effbot.org/downloads/#imaging
-
-::
-
-  tar -xvzf Imaging-1.1.7.tar.gz
-  cd Imaging-1.1.7
-  python setup.py build
-  sudo python setup.py install
-
 Usage
 =====
 
 ::
 
-  bundler "someFolder/*.png"
+  bundler someFolder
 
-Don't forget the quote or your shell will try to handle it
+Bundler will try to open every file it can handle.
 
 You should use `pngcrush`_ or `optipng`_ for a perfect optimisation.
 
