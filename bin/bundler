@@ -5,7 +5,7 @@ import sys
 import bundler
 
 if len(sys.argv) < 2:
-	print "[Warning]I need of folder as argument"
-	print "$ bundler images/"
+    print "[Warning]I need of folder as argument"
+    print "$ bundler images/"
 else:
-	bundler.bundle(sys.argv[1])
+    bundler.bundle(sys.argv[1])
