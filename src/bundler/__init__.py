@@ -144,16 +144,14 @@ class Bundle:
 """ % (img.path, idt)
                 width += w
         big.save('bundle.png')
-        f = open('bundle.css', 'w')
-        f.write(css)
-        f.close()
+        with open('bundle.css', 'w') as f:
+            f.write(css)
         html += """
         </body>
 </html>
 """
-        f = open('bundle.html', 'w')
-        f.write(html)
-        f.close()
+        with open('bundle.html', 'w') as f:
+            f.write(html)
 
 
 def redBorder(im):
