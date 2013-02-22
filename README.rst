@@ -40,6 +40,11 @@ You should use `pngcrush`_ or `optipng`_ for a perfect optimisation.
 
 Bundler builds a big PNG file, a cute CSS file and an ugly HTML test file.
 
+Licence
+=======
+
+GPL v3.
+
 .. _`PIL`: http://www.pythonware.com/products/pil/
 .. _`pngcrush`: http://pmt.sourceforge.net/pngcrush/
 .. _`optipng`: http://optipng.sourceforge.net/
